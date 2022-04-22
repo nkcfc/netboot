@@ -337,7 +337,7 @@ version defaults to latest, can also be a YYYY.MM.DD iso release version`,
 			fmt.Println(staticFromFlags(cmd, kernel, []string{initrd}, cmdline).Serve())
 		},
 	}
-	archCmd.Flags().String("mirror", "https://mirrors.kernel.org/archlinux", "Root of the archlinux mirror to use")
+	archCmd.Flags().String("mirror", "http://192.168.1.110", "Root of the archlinux mirror to use")
 	serverConfigFlags(archCmd)
 	staticConfigFlags(archCmd)
 	parent.AddCommand(archCmd)
